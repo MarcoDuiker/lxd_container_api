@@ -7,7 +7,7 @@ class postgresql(object):
         self.name = 'postgresql'
 
 
-    def _execute(self, command):
+    def _execute(self, command, **kwargs):
         '''
         Accepts command as a list, and executes using subproces.
 

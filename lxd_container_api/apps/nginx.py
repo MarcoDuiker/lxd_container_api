@@ -6,7 +6,7 @@ class nginx(object):
     def __init__(self):
         self.name = 'nginx'
 
-    def _execute(self, command):
+    def _execute(self, command, **kwargs):
         '''
         Accepts command as a list, and executes using subproces.
 
