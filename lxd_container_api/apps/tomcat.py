@@ -1,6 +1,9 @@
-import subprocess
+#import subprocess
 
-class tomcat(object):
+#class tomcat(object):
+from ._app import _app
+
+class tomcat(_app):
 
     def __init__(self):
         self.name = 'tomcat'

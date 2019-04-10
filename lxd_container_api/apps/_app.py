@@ -12,7 +12,7 @@ class _app(object):
     only by setting `self.name` to `app_name_goes_here`.
 
     Other apps should overide the properties and methods 
-    from this base class
+    from this base class.
     '''
 
     def _execute(self, command, **kwargs):
