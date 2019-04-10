@@ -8,7 +8,7 @@ in the container.
 
 setup(
     name='lxd_container_api',
-    version='0.2',
+    version='0.3',
     description='lxd_container_api',
     long_description=long_description,
     url='',

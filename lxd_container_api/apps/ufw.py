@@ -1,23 +1,9 @@
-import subprocess
+from ._app import _app
 
-class example(object):
+class ufw(_app):
 
     def __init__(self):
         self.name = 'ufw'
-
-    def _execute(self, command, **kwargs):
-        '''
-        Accepts command as a list, and executes using subproces.
-
-        Returns a subprocess. CompletedProcess object.
-        '''
-
-        return   subprocess.run(command, 
-                                stdin = subprocess.PIPE, 
-                                stdout = subprocess.PIPE, 
-                                stderr = subprocess.PIPE,
-                                check = True,
-                                **kwargs)
 
     @property
     def status(self):
@@ -31,7 +17,6 @@ class example(object):
 
         if 'Status: active' in self.status:
             return True
-
 
     @property
     def is_stopped(self):
@@ -50,9 +35,3 @@ class example(object):
         '''Stops the program or service.'''
 
         return self._execute([self.name,'disable']).stdout.decode("utf-8")
-
-    def exec(self, command, *args, **kwargs):
-        '''Executes an arbitrary command with the given name and arguments.'''
-
-        pass
-
