@@ -6,6 +6,14 @@ class postgresql(object):
     def __init__(self):
         self.name = 'postgresql'
 
+
+    def _execute(self, command):
+        '''
+        Accepts command as a list, and executes using subproces.
+
+        Returns a subprocess. CompletedProcess object.
+        '''
+
         return   subprocess.run(command, 
                                 stdin = subprocess.PIPE, 
                                 stdout = subprocess.PIPE, 
