@@ -1,6 +1,6 @@
 import subprocess
 
-class example(object):
+class tomcat(object):
 
     def __init__(self):
         self.name = 'tomcat'
