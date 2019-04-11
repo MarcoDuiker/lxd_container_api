@@ -25,7 +25,6 @@ class ufw(_app):
         if 'Status: inactive' in self.status:
             return True
 
-
     def start(self, *args, **kwargs):
         '''Starts the program or service with the optionally given arguments.'''
 
